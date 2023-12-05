@@ -114,11 +114,11 @@ function banner() {
     const lengthInFeet = calculateLengthInFeet();
     const widthInFeet = calculateWidthInFeet();
 
-    const webbing = (lengthInFeet + widthInFeet) * 2 * 1.25;
+    const webbing = ((lengthInFeet + widthInFeet) * 2 * 1.25)+basePrice;
     basePrice = webbingSwitch ? webbing : basePrice;
 
     const grommetsCount = calculateGrommetCount();
-    const roundedGrommetsCount = Math.ceil(grommetsCount / 2) * 2;
+    const roundedGrommetsCount = Math.ceil((grommetsCount / 2) * 2);
     const grommets = basePrice + roundedGrommetsCount * 0.75;
     basePrice = grommetsSwitch ? grommets : basePrice;
 
