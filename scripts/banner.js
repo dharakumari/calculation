@@ -109,9 +109,7 @@ function banner() {
     basePrice = material13oz ? basePrice13oz : basePrice;
     basePrice = material9oz ? basePrice9oz : basePrice;
 
-    // Apply upgrades
-    const proof = basePrice + 5;
-    basePrice = proofSwitch ? proof : basePrice;
+ 
 
     const lengthInFeet = calculateLengthInFeet();
     const widthInFeet = calculateWidthInFeet();
@@ -133,7 +131,9 @@ function banner() {
 
     const artServiceCost = basePrice + 95;
     basePrice = artServiceSwitch ? artServiceCost : basePrice;
-
+   // Apply upgrades
+   const proof = basePrice + 5;
+   basePrice = proofSwitch ? proof : basePrice;
     basePrice = basePrice * quantity;
     const ajaxPrice = basePrice;
 
