@@ -141,7 +141,9 @@ function banner() {
     ajaxPriceInput.value = ajaxPrice.toFixed(2);
   }
 
-  function calculateShippingCost(material, totalSqFt) {
+  function calculateShippingCost(material) {
+    const totalSqFt = calculateTotalSquareFeet();
+
     // Minimum shipping cost
     const minShippingCost = 25;
     // Shipping rates per material

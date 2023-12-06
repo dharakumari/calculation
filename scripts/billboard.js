@@ -95,7 +95,7 @@ function billboard() {
   
     function calculateShippingCost(material) {
       const totalSqFt = calculateTotalSquareFeet();
-  
+  console.log(totalSqFt);
       // Minimum shipping cost
       const minShippingCost = 25;
       // Shipping rates per material
