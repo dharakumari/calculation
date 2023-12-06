@@ -68,11 +68,13 @@ function backlit() {
     // Apply upgrades
     const proof = basePrice + 5;
     basePrice = proofSwitch ? proof : basePrice;
-    basePrice = basePrice * quantity;
-    const ajaxPrice = basePrice;
 
     const artServiceCost = basePrice + 95;
     basePrice = artServiceSwitch ? artServiceCost : basePrice;
+
+    basePrice = basePrice * quantity;
+
+    const ajaxPrice = basePrice;
 
     // Display the AJAX price
     ajaxPriceInput.value = ajaxPrice.toFixed(2);
@@ -81,9 +83,8 @@ function backlit() {
 
   function showShippingText() {
     let bleed = 0;
- 
-    bleed = bleedInput.value === "" ? 0 :
-        parseFloat(bleedInput.value);
+
+    bleed = bleedInput.value === "" ? 0 : parseFloat(bleedInput.value);
 
     const length = calculateLengthInInches() + bleed;
     const width = calculateWidthInInches() + bleed;
@@ -97,7 +98,7 @@ function backlit() {
   function calculateShippingCost(material) {
     const totalSqFt = calculateTotalSquareFeet();
     console.log(totalSqFt);
-  
+
     // Minimum shipping cost
     const minShippingCost = 25;
     // Shipping rates per material
@@ -111,7 +112,7 @@ function backlit() {
     }
     return shippingCost;
   }
-  
+
   function showOrderSummary() {
     // Collect all form field values
     const quantity = quantityInput.value;
@@ -211,6 +212,10 @@ function backlit() {
 
   document
     .getElementById("tab3straightcutedgeSwitch")
+    .addEventListener("change", calculateAJAXPrice);
+  //artServiceSwitch
+  document
+    .getElementById("tab3artServiceSwitch")
     .addEventListener("change", calculateAJAXPrice);
 
   // Initialize calculation on page load
