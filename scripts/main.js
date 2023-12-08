@@ -24,7 +24,7 @@ function validateFeetInput(input) {
   function validateInchInput(input) {
     // Remove any non-numeric characters
     let value = input.value.replace(/[^0-9]/g, '');
-    value = Math.min(value, 12); // Limit the value to 12
+    value = Math.min(value, 11); // Limit the value to 11
 
     // Update the input value with the cleaned value
     input.value = value;

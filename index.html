@@ -30,8 +30,8 @@
                         <input type="file" id="tab1image" class="file-upload">
                     </div>
                     <div class="form-item">
-                        <label for="ajaxPrice">AJAX Price:</label>
-                        <input type="text" id="tab1ajaxPrice" class="input-box" placeholder="Enter AJAX Price">
+                        <label for="ajaxPrice">Price:</label>
+                        <input type="text" id="tab1ajaxPrice" class="input-box" placeholder="Enter Price">
                     </div>
                 </div>
 
@@ -146,8 +146,8 @@
                         <input type="file" id="tab2image" class="file-upload">
                     </div>
                     <div class="form-item">
-                        <label for="ajaxPrice">AJAX Price:</label>
-                        <input type="text" id="tab2ajaxPrice" class="input-box" placeholder="Enter AJAX Price">
+                        <label for="ajaxPrice">Price:</label>
+                        <input type="text" id="tab2ajaxPrice" class="input-box" placeholder="Enter Price">
                     </div>
                 </div>
 
@@ -170,39 +170,20 @@
                     <div class="form-item">
                         <label for="dimensions">Enter Dimensions:</label>
                         <div class="dimensions-container">
-                            <input type="number" id="tab2length-feet" class="input-box" placeholder="Length-feet">
-                            <select id="tab2length-inch" class="input-box">
-                                <option value="0">0 inch</option>
-                                <option value="1">1 inch</option>
-                                <option value="2">2 inches</option>
-                                <option value="3">3 inches</option>
-                                <option value="4">4 inches</option>
-                                <option value="5">5 inches</option>
-                                <option value="6">6 inches</option>
-                                <option value="7">7 inches</option>
-                                <option value="8">8 inches</option>
-                                <option value="9">9 inches</option>
-                                <option value="10">10 inches</option>
-                                <option value="11">11 inches</option>
-                            </select>
-                            <input type="number" id="tab2width-feet" class="input-box" placeholder="Width-feet">
-                            <select id="tab2width-inch" class="input-box">
-                                <option value="0">0 inch</option>
-                                <option value="1">1 inch</option>
-                                <option value="2">2 inches</option>
-                                <option value="3">3 inches</option>
-                                <option value="4">4 inches</option>
-                                <option value="5">5 inches</option>
-                                <option value="6">6 inches</option>
-                                <option value="7">7 inches</option>
-                                <option value="8">8 inches</option>
-                                <option value="9">9 inches</option>
-                                <option value="10">10 inches</option>
-                                <option value="11">11 inches</option>
+                            <input type="number" id="tab2length-feet" class="input-box" placeholder="Length-feet "
+                                oninput="validateFeetInput(this)">
+                            <input type="number" id="tab2length-inch" class="input-box"
+                                placeholder="Length-Inch (max 12)" oninput="validateInchInput(this)">
 
-                            </select>
+
+
+                            <input type="number" id="tab2width-feet" class="input-box" placeholder="Width-feet"
+                                oninput="validateFeetInput(this)">
+                            <input type="number" id="tab2width-inch" class="input-box"
+                                placeholder="Length-Inch (max 12)" oninput="validateInchInput(this)">
 
                         </div>
+
 
                         <!-- <div class="dimensions-container">
                             <input type="number" id="tab2bleed" class="input-box" placeholder="bleed">
@@ -319,8 +300,8 @@
                         <input type="file" id="tab3image" class="file-upload">
                     </div>
                     <div class="form-item">
-                        <label for="ajaxPrice">AJAX Price:</label>
-                        <input type="text" id="tab3ajaxPrice" class="input-box" placeholder="Enter AJAX Price">
+                        <label for="ajaxPrice">Price:</label>
+                        <input type="text" id="tab3ajaxPrice" class="input-box" placeholder="Enter Price">
                     </div>
                 </div>
 
@@ -336,39 +317,20 @@
                     <div class="form-item">
                         <label for="dimensions">Enter Dimensions:</label>
                         <div class="dimensions-container">
-                            <input type="number" id="tab3length-feet" class="input-box" placeholder="Length-feet">
-                            <select id="tab3length-inch" class="input-box">
-                                <option value="0">0 inch</option>
-                                <option value="1">1 inch</option>
-                                <option value="2">2 inches</option>
-                                <option value="3">3 inches</option>
-                                <option value="4">4 inches</option>
-                                <option value="5">5 inches</option>
-                                <option value="6">6 inches</option>
-                                <option value="7">7 inches</option>
-                                <option value="8">8 inches</option>
-                                <option value="9">9 inches</option>
-                                <option value="10">10 inches</option>
-                                <option value="11">11 inches</option>
-                            </select>
-                            <input type="number" id="tab3width-feet" class="input-box" placeholder="Width-feet">
-                            <select id="tab3width-inch" class="input-box">
-                                <option value="0">0 inch</option>
-                                <option value="1">1 inch</option>
-                                <option value="2">2 inches</option>
-                                <option value="3">3 inches</option>
-                                <option value="4">4 inches</option>
-                                <option value="5">5 inches</option>
-                                <option value="6">6 inches</option>
-                                <option value="7">7 inches</option>
-                                <option value="8">8 inches</option>
-                                <option value="9">9 inches</option>
-                                <option value="10">10 inches</option>
-                                <option value="11">11 inches</option>
+                            <input type="number" id="tab3length-feet" class="input-box" placeholder="Length-feet "
+                                oninput="validateFeetInput(this)">
+                            <input type="number" id="tab3length-inch" class="input-box"
+                                placeholder="Length-Inch (max 12)" oninput="validateInchInput(this)">
 
-                            </select>
+
+
+                            <input type="number" id="tab3width-feet" class="input-box" placeholder="Width-feet"
+                                oninput="validateFeetInput(this)">
+                            <input type="number" id="tab3width-inch" class="input-box"
+                                placeholder="Length-Inch (max 12)" oninput="validateInchInput(this)">
 
                         </div>
+
 
                         <div class="dimensions-container">
                             <input type="number" id="tab3bleed" class="input-box" placeholder="bleed">
@@ -503,28 +465,27 @@
                         <input type="file" id="tab4image" class="file-upload">
                     </div>
                     <div class="form-item">
-                        <label for="ajaxPrice">AJAX Price:</label>
-                        <input type="text" id="tab4ajaxPrice" class="input-box" placeholder="Enter AJAX Price">
+                        <label for="ajaxPrice">Price:</label>
+                        <input type="text" id="tab4ajaxPrice" class="input-box" placeholder="Enter Price">
                     </div>
                 </div>
 
 
                 <div class="form-row">
                     <div class="form-item">
+                    
                         <div class="dimensions-container">
-                            <label for="dimension">Enter Dimensions:</label>
-                            <select id="tab4dimension" class="input-box">
-                                <option value="18x24">18 x 24</option>
-                                <option value="24x36">24 x 36</option>
-                                <option value="24x24">24 x 24</option>
-                                <option value="12x18">12 x 18</option>
-                                <option value="24x32">24 x 32</option>
-                                <option value="36x48">36 x 48</option>
-                                <option value="12x24">12 x 24</option>
-                                <option value="24x48">24 x 48</option>
-                                <option value="12x12">12 x 12</option>
-                                <option value="32x48">32 x 48</option>
-                            </select>
+                            <input type="number" id="tab4length-feet" class="input-box" placeholder="Length-feet "
+                                oninput="validateFeetInput(this)">
+                            <input type="number" id="tab4length-inch" class="input-box"
+                                placeholder="Length-Inch (max 12)" oninput="validateInchInput(this)">
+
+
+
+                            <input type="number" id="tab4width-feet" class="input-box" placeholder="Width-feet"
+                                oninput="validateFeetInput(this)">
+                            <input type="number" id="tab4width-inch" class="input-box"
+                                placeholder="Length-Inch (max 12)" oninput="validateInchInput(this)">
 
                         </div>
 
