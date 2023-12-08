@@ -84,19 +84,21 @@ function yards() {
     const rate50 = 0.55;
     // Calculate total shipping cost
     let shippingCost = 0;
+    console.log("shippingCost", shippingCost);
 
     console.log(quantity);
     console.log("dd", dimension);
+    console.log("hStakesSwitch", hStakesSwitch);
 
-    if (hStakesSwitch == "true") {
+    if (hStakesSwitch = "true") {
         shippingCost = 0.25 * quantity;
     }
 
     // Move this block after the hStakesSwitch check
     if (dimension === '18x24') {
-        shippingCost = Math.max(quantity * rate40, minShippingCost);
+        shippingCost = Math.max((quantity * rate40)+shippingCost, minShippingCost);
     } else if (dimension === '24x36') {
-        shippingCost = Math.max(quantity * rate50, minShippingCost);
+        shippingCost = Math.max((quantity * rate50)+shippingCost, minShippingCost);
     } else {
         shippingCost = minShippingCost;
     }
