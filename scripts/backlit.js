@@ -86,8 +86,8 @@ function backlit() {
 
     bleed = bleedInput.value === "" ? 0 : parseFloat(bleedInput.value);
 
-    const length = calculateLengthInInches() + bleed;
-    const width = calculateWidthInInches() + bleed;
+    const length = calculateLengthInInches() + (bleed*2);
+    const width = calculateWidthInInches() + (bleed*2);
 
     if (length > 106 || width > 106) {
       return "Note: This order will be shipped in a larger freight truck and will be charged differently. Shortly, one of our representatives will be emailing you with the additional shipping charges.";

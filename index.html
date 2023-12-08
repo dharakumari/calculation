@@ -50,39 +50,18 @@
                     <div class="form-item">
                         <label for="dimensions">Enter Dimensions:</label>
                         <div class="dimensions-container">
-                            <input type="number" id="tab1length-feet" class="input-box" placeholder="Length-feet">
-                            <select id="tab1length-inch" class="input-box">
-                                <option value="0">0 inch</option>
-                                <option value="1">1 inch</option>
-                                <option value="2">2 inches</option>
-                                <option value="3">3 inches</option>
-                                <option value="4">4 inches</option>
-                                <option value="5">5 inches</option>
-                                <option value="6">6 inches</option>
-                                <option value="7">7 inches</option>
-                                <option value="8">8 inches</option>
-                                <option value="9">9 inches</option>
-                                <option value="10">10 inches</option>
-                                <option value="11">11 inches</option>
-                            </select>
+                            <input type="number" id="tab1length-feet" class="input-box" placeholder="Length-feet "
+                                oninput="validateFeetInput(this)">
+                            <input type="number" id="tab1length-inch" class="input-box"
+                                placeholder="Length-Inch (max 12)" oninput="validateInchInput(this)">
 
 
-                            <input type="number" id="tab1width-feet" class="input-box" placeholder="Width-feet">
-                            <select id="tab1width-inch" class="input-box">
-                                <option value="0">0 inch</option>
-                                <option value="1">1 inch</option>
-                                <option value="2">2 inches</option>
-                                <option value="3">3 inches</option>
-                                <option value="4">4 inches</option>
-                                <option value="5">5 inches</option>
-                                <option value="6">6 inches</option>
-                                <option value="7">7 inches</option>
-                                <option value="8">8 inches</option>
-                                <option value="9">9 inches</option>
-                                <option value="10">10 inches</option>
-                                <option value="11">11 inches</option>
 
-                            </select>
+                            <input type="number" id="tab1width-feet" class="input-box" placeholder="Width-feet"
+                                oninput="validateFeetInput(this)">
+                            <input type="number" id="tab1width-inch" class="input-box"
+                                placeholder="Length-Inch (max 12)" oninput="validateInchInput(this)">
+
                         </div>
 
                         <div class="dimensions-container">

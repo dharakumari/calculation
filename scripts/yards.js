@@ -72,8 +72,11 @@ function yards() {
     // Display the AJAX price
     ajaxPriceInput.value = ajaxPrice.toFixed(2);
   }
+  function calculateShippingCost(dimension, hStakesSwitch) {
+    console.log("dimension", dimension);
+    console.log("hStakesSwitch", hStakesSwitch);
+    const quantity = quantityInput.value;
 
-  function calculateShippingCost(material) {
     // Minimum shipping cost
     const minShippingCost = 25;
     // Shipping rates per material
@@ -81,13 +84,26 @@ function yards() {
     const rate50 = 0.55;
     // Calculate total shipping cost
     let shippingCost = 0;
-    if (material === '4mm') {
-      shippingCost = Math.max(4 * rate40, minShippingCost);
-    } else if (material === '6mm') {
-      shippingCost = Math.max(6 * rate50, minShippingCost);
+
+    console.log(quantity);
+    console.log("dd", dimension);
+
+    if (hStakesSwitch == "true") {
+        shippingCost = 0.25 * quantity;
     }
+
+    // Move this block after the hStakesSwitch check
+    if (dimension === '18x24') {
+        shippingCost = Math.max(quantity * rate40, minShippingCost);
+    } else if (dimension === '24x36') {
+        shippingCost = Math.max(quantity * rate50, minShippingCost);
+    } else {
+        shippingCost = minShippingCost;
+    }
+
     return shippingCost;
-  }
+}
+
 
   function showOrderSummary() {
     // Collect all form field values
@@ -99,7 +115,7 @@ function yards() {
     const orderNotes = orderNotesTextarea.value;
 
     // Calculate shipping cost based on material and total square footage
-    const shippingCost = calculateShippingCost(material4mmCheckbox.checked || material6mmCheckbox.checked);
+    const shippingCost = calculateShippingCost(dimensionInput.value,hStakesSwitchCheckbox.checked);
 
     // Calculate total price with shipping
     const basePriceWithShipping = parseFloat(ajaxPrice) + shippingCost;

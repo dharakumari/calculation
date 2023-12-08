@@ -13,6 +13,21 @@ function openTab(tabId) {
     document.getElementById(tabId).classList.remove('hidden');
     document.querySelector('.tab[data-tab="' + tabId + '"]').classList.add('active');
 }
+function validateFeetInput(input) {
+    // Remove any non-numeric characters
+    let value = input.value.replace(/[^0-9]/g, '');
 
+    // Update the input value with the cleaned value
+    input.value = value;
+  }
+
+  function validateInchInput(input) {
+    // Remove any non-numeric characters
+    let value = input.value.replace(/[^0-9]/g, '');
+    value = Math.min(value, 12); // Limit the value to 12
+
+    // Update the input value with the cleaned value
+    input.value = value;
+  }
 
 
