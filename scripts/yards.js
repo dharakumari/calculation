@@ -101,15 +101,14 @@ function yards() {
     console.log("dd", dimension);
     console.log("hStakesSwitch", hStakesSwitch);
 
-    if ((hStakesSwitch = "true")) {
-      shippingCost = 0.25 * quantity;
-    }
+
+    hStakesSwitch? shippingCost = 0.25 * quantity :   shippingCost = 0;
 
     // Move this block after the hStakesSwitch check
     if (dimension === "18x24") {
       console.log(dimension);
       shippingCost = Math.max(
-        55 * rate40 + shippingCost,
+        quantity * rate40 + shippingCost,
         minShippingCost
       );
     } else if (dimension === "24x36") {
@@ -153,10 +152,7 @@ function yards() {
         minShippingCost
       );
     } else if (dimension === "32x48") {
-      shippingCost = Math.max(
-        quantity * rate65 + shippingCost,
-        
-      );
+      shippingCost = Math.max(quantity * rate65 + shippingCost);
     } else {
       shippingCost = minShippingCost;
     }
